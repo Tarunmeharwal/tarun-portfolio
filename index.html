@@ -139,11 +139,25 @@
     }
     
     /* Marquee */
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .marquee { animation: marquee 20s linear infinite; }
+.animate-marquee-smooth {
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pause on hover – feels premium */
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Optional: subtle border glow effect */
+.border-y.border-white\/5 {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
     
     /* Blob */
     .blob {
@@ -212,7 +226,12 @@
             <span class="text-gray-400">Meharwal</span>
           </h1>
           <p class="text-xl md:text-2xl text-gray-600 mb-4 font-light">Full-Stack Developer</p>
-          <p class="text-gray-500 text-lg mb-8 max-w-lg leading-relaxed">Crafting premium digital experiences with modern technologies. Specialized in building scalable web applications that drive business growth.</p>
+          <p class="text-gray-500 text-lg mb-8 max-w-xl leading-relaxed">
+          Full-Stack Developer with <span class="font-semibold text-gray-700">1.5+ years of hands-on experience</span> building 
+          scalable web applications, EdTech platforms, student dashboards, and pixel-perfect responsive websites. 
+          Proficient in <span class="font-medium text-gray-700">Next.js, React.js, Node.js, Express.js, MongoDB, Tailwind CSS</span>, 
+          and VPS deployment. I take projects from <span class="font-medium text-gray-700">UI/UX design to full production deployment</span> — independently and on time.
+        </p>
           <div class="flex flex-wrap gap-4 mb-10">
             <a href="#contact" class="magnetic-btn bg-gray-900 text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition inline-flex items-center gap-2">
               Get in Touch
@@ -234,16 +253,6 @@
         </div>
         <div class="reveal relative" style="transition-delay: 0.2s;">
           <div class="relative">
-            <!-- <div class="w-72 h-72 md:w-96 md:h-96 mx-auto rounded-3xl bg-gradient-to-br from-gray-100 to-gray-200 floating overflow-hidden">
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-center">
-                  <div class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center mb-4">
-                    <span class="font-display text-5xl md:text-6xl font-bold text-white">T</span>
-                  </div>
-                  <p class="text-gray-500 text-sm">Full-Stack Developer</p>
-                </div>
-              </div>
-            </div> -->
 <div class="w-72 h-72 md:w-96 md:h-96 mx-auto rounded-3xl bg-gradient-to-br from-gray-100 to-gray-200 floating overflow-hidden relative">
   <div class="absolute inset-0 flex items-center justify-center">
     <div class="text-center">
@@ -289,20 +298,30 @@
   </section>
 
   <!-- Marquee -->
-  <div class="py-8 bg-gray-900 overflow-hidden">
-    <div class="marquee flex whitespace-nowrap">
-      <span class="text-white/20 text-6xl font-display font-bold mx-8">React.js</span>
-      <span class="text-white/20 text-6xl font-display font-bold mx-8">Next.js</span>
-      <span class="text-white/20 text-6xl font-display font-bold mx-8">Node.js</span>
-      <span class="text-white/20 text-6xl font-display font-bold mx-8">MongoDB</span>
-      <span class="text-white/20 text-6xl font-display font-bold mx-8">Tailwind</span>
-      <span class="text-white/20 text-6xl font-display font-bold mx-8">Figma</span>
-      <span class="text-white/20 text-6xl font-display font-bold mx-8">React.js</span>
-      <span class="text-white/20 text-6xl font-display font-bold mx-8">Next.js</span>
-      <span class="text-white/20 text-6xl font-display font-bold mx-8">Node.js</span>
-      <span class="text-white/20 text-6xl font-display font-bold mx-8">MongoDB</span>
-    </div>
+<!-- Premium Marquee – Slim & Elegant -->
+<div class="py-4 bg-gray-900 overflow-hidden border-y border-white/5">
+  <div class="marquee flex whitespace-nowrap animate-marquee-smooth">
+    <!-- First set -->
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">React.js</span>
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">Next.js</span>
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">Node.js</span>
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">PHP</span>
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">MySQL</span>
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">MongoDB</span>
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">Tailwind CSS</span>
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">Figma</span>
+
+    <!-- Duplicate set for seamless loop -->
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">React.js</span>
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">Next.js</span>
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">Node.js</span>
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">PHP</span>
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">MySQL</span>
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">MongoDB</span>
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">Tailwind CSS</span>
+    <span class="text-white/25 text-3xl md:text-4xl font-display font-bold tracking-wider mx-10 lg:mx-14">Figma</span>
   </div>
+</div>
 
   <!-- Services -->
   <section id="services" class="py-24 relative">
@@ -338,212 +357,296 @@
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid lg:grid-cols-2 gap-16">
-        <div class="reveal">
-          <p class="text-sm font-medium text-gray-400 uppercase tracking-widest mb-4">My Journey</p>
-          <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">Work Experience</h2>
-          <p class="text-gray-500 text-lg">Building digital products that make an impact. From EdTech platforms to marketing websites.</p>
+<section id="experience" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-16">
+      <div class="reveal">
+        <p class="text-sm font-medium text-gray-400 uppercase tracking-widest mb-4">My Journey</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">Work Experience</h2>
+        <p class="text-gray-500 text-lg">
+          Single-handedly designed, built, and deployed production-grade full-stack applications — from complex EdTech platforms with payment gateways to pixel-perfect marketing websites.
+        </p>
+      </div>
+
+      <div class="space-y-10">
+        <!-- Meritroot – Your strongest experience -->
+        <div class="reveal border-l-2 border-gray-200 pl-8 relative timeline-dot">
+          <div class="glass-card rounded-2xl p-6 premium-hover">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-3 py-1 bg-gray-900 text-white text-xs font-medium rounded-full">Full-time</span>
+              <span class="text-sm text-gray-400">May 2024 – June 2025</span>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-1">Full-Stack Developer</h3>
+            <p class="text-gray-500 mb-4">Meritroot Pvt Ltd • JEE & NEET EdTech Platform</p>
+            <ul class="text-sm text-gray-400 space-y-2 leading-relaxed">
+              <li>• Built the entire platform from scratch: student dashboard, course enrollment, HDFC payment gateway, quizzes, mock tests & progress analytics</li>
+              <li>• Developed with Next.js (App Router + SSR), Node.js, Express, MongoDB, Tailwind CSS</li>
+              <li>• Designed complete UI/UX system in Figma and implemented pixel-perfect, responsive frontend</li>
+              <li>• Deployed and maintain live production on Hostinger VPS (Linux + Nginx + SSL)</li>
+            </ul>
+            <a href="https://meritroot.com" target="_blank" class="inline-block mt-4 text-sm font-medium text-indigo-600 hover:text-indigo-700">
+              → meritroot.com (Live)
+            </a>
+          </div>
         </div>
-        <div class="space-y-8">
-          <div class="reveal border-l-2 border-gray-200 pl-8 relative timeline-dot">
-            <div class="glass-card rounded-2xl p-6 premium-hover">
-              <div class="flex items-center gap-3 mb-3">
-                <span class="px-3 py-1 bg-gray-900 text-white text-xs font-medium rounded-full">Full-time</span>
-                <span class="text-sm text-gray-400">May 2024 – June 2025</span>
-              </div>
-              <h3 class="font-display text-xl font-bold mb-1">Full-Stack Developer</h3>
-              <p class="text-gray-500 mb-3">Meritroot Pvt Ltd • EdTech Platform</p>
-              <p class="text-sm text-gray-400 leading-relaxed">Built complete JEE/NEET platform from scratch including student dashboard, course enrollment, payment gateway, and admin panel. Deployed on Hostinger VPS.</p>
+
+        <!-- Freelance -->
+        <div class="reveal border-l-2 border-gray-200 pl-8 relative timeline-dot" style="transition-delay: 0.1s;">
+          <div class="glass-card rounded-2xl p-6 premium-hover">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">Freelance</span>
+              <span class="text-sm text-gray-400">September 2025 – Present</span>
             </div>
+            <h3 class="font-display text-xl font-bold mb-1">Freelance Full-Stack Developer & Designer</h3>
+            <p class="text-gray-500 mb-4">Multiple Clients</p>
+            <ul class="text-sm text-gray-400 space-y-2 leading-relaxed">
+              <li>• Built and deployed Traffiqon.com – fully responsive digital marketing agency website</li>
+              <li>• Created Instagram graphics, reels, and managed WordPress blog for TheSunYTTC Yoga School (Rishikesh)</li>
+              <li>• Delivered clean, mobile-first code with Tailwind CSS, JavaScript, and modern animations</li>
+            </ul>
           </div>
-          <div class="reveal border-l-2 border-gray-200 pl-8 relative timeline-dot" style="transition-delay: 0.1s;">
-            <div class="glass-card rounded-2xl p-6 premium-hover">
-              <div class="flex items-center gap-3 mb-3">
-                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">Freelance</span>
-                <span class="text-sm text-gray-400">Sept 2025 – Present</span>
-              </div>
-              <h3 class="font-display text-xl font-bold mb-1">Freelance Developer</h3>
-              <p class="text-gray-500 mb-3">Traffiqon.com & Creative Projects</p>
-              <p class="text-sm text-gray-400 leading-relaxed">Developed digital marketing website frontend, created social media graphics, and produced video content using modern tools.</p>
+        </div>
+
+        <!-- Education -->
+        <div class="reveal border-l-2 border-gray-200 pl-8 relative timeline-dot" style="transition-delay: 0.2s;">
+          <div class="glass-card rounded-2xl p-6 premium-hover">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Education</span>
+              <span class="text-sm text-gray-400">2020 – 2023</span>
             </div>
-          </div>
-          <div class="reveal border-l-2 border-gray-200 pl-8 relative timeline-dot" style="transition-delay: 0.2s;">
-            <div class="glass-card rounded-2xl p-6 premium-hover">
-              <div class="flex items-center gap-3 mb-3">
-                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Education</span>
-                <span class="text-sm text-gray-400">2020 – 2023</span>
-              </div>
-              <h3 class="font-display text-xl font-bold mb-1">BCA Graduate</h3>
-              <p class="text-gray-500 mb-3">Graphic Era Hill University • CGPA: 7.76</p>
-              <p class="text-sm text-gray-400 leading-relaxed">Bachelor of Computer Applications with focus on programming fundamentals and software development.</p>
-            </div>
+            <h3 class="font-display text-xl font-bold mb-1">Bachelor of Computer Applications (BCA)</h3>
+            <p class="text-gray-500 mb-3">Graphic Era Hill University, Dehradun</p>
+            <p class="text-sm text-gray-400">CGPA: 7.76 • Strong foundation in programming and software engineering</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Skills -->
-  <section id="skills" class="py-24 relative overflow-hidden">
-    <div class="blob w-96 h-96 bg-green-200 -bottom-48 -right-48"></div>
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16 reveal">
-        <p class="text-sm font-medium text-gray-400 uppercase tracking-widest mb-4">My Arsenal</p>
-        <h2 class="font-display text-4xl md:text-5xl font-bold">Skills & Technologies</h2>
+<!-- Skills -->
+<section id="skills" class="py-24 relative overflow-hidden">
+  <div class="blob w-96 h-96 bg-green-200 -bottom-48 -right-48"></div>
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <p class="text-sm font-medium text-gray-400 uppercase tracking-widest mb-4">My Arsenal</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold">Skills & Technologies</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- React.js -->
+      <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group">
+        <div class="w-14 h-14 mx-auto mb-4 bg-cyan-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 text-cyan-600" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="2.5"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" stroke-width="1.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" stroke-width="1.5" transform="rotate(120 12 12)"/></svg>
+        </div>
+        <h4 class="font-semibold mb-1">React.js</h4>
+        <p class="text-xs text-gray-400">Frontend</p>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group">
-          <div class="w-14 h-14 mx-auto mb-4 bg-cyan-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-            <svg class="w-8 h-8 text-cyan-600" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="2.5"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" stroke-width="1.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" stroke-width="1.5" transform="rotate(120 12 12)"/></svg>
-          </div>
-          <h4 class="font-semibold mb-1">React.js</h4>
-          <p class="text-xs text-gray-400">Frontend</p>
+
+      <!-- Next.js -->
+      <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.05s;">
+        <div class="w-14 h-14 mx-auto mb-4 bg-gray-900 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+          <span class="text-white font-bold text-lg">N</span>
         </div>
-        <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.05s;">
-          <div class="w-14 h-14 mx-auto mb-4 bg-gray-900 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-            <span class="text-white font-bold text-lg">N</span>
-          </div>
-          <h4 class="font-semibold mb-1">Next.js</h4>
-          <p class="text-xs text-gray-400">Framework</p>
-        </div>
-        <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.1s;">
-          <div class="w-14 h-14 mx-auto mb-4 bg-green-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-            <svg class="w-8 h-8 text-green-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.985c-.275 0-.532-.074-.772-.202l-2.439-1.448c-.365-.203-.182-.277-.072-.314.496-.165.588-.201 1.101-.493.056-.037.129-.02.185.017l1.87 1.12c.074.036.166.036.221 0l7.319-4.237c.074-.036.11-.11.11-.202V7.768c0-.091-.036-.165-.11-.201l-7.319-4.219c-.073-.037-.165-.037-.221 0L4.552 7.566c-.073.036-.11.129-.11.201v8.457c0 .073.037.166.11.202l2 1.157c1.082.548 1.762-.095 1.762-.735V8.502c0-.11.091-.221.22-.221h.936c.108 0 .22.092.22.221v8.347c0 1.449-.788 2.294-2.164 2.294-.422 0-.752 0-1.688-.46l-1.925-1.099a1.55 1.55 0 0 1-.771-1.34V7.786c0-.55.293-1.064.771-1.339l7.316-4.237a1.637 1.637 0 0 1 1.544 0l7.317 4.237c.479.274.771.789.771 1.339v8.458c0 .549-.293 1.063-.771 1.34l-7.317 4.236c-.241.11-.516.165-.773.165z"/></svg>
-          </div>
-          <h4 class="font-semibold mb-1">Node.js</h4>
-          <p class="text-xs text-gray-400">Backend</p>
-        </div>
-        <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.15s;">
-          <div class="w-14 h-14 mx-auto mb-4 bg-green-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-            <svg class="w-8 h-8 text-green-700" viewBox="0 0 24 24" fill="currentColor"><path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z"/></svg>
-          </div>
-          <h4 class="font-semibold mb-1">MongoDB</h4>
-          <p class="text-xs text-gray-400">Database</p>
-        </div>
-        <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.2s;">
-          <div class="w-14 h-14 mx-auto mb-4 bg-cyan-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-            <svg class="w-8 h-8 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/></svg>
-          </div>
-          <h4 class="font-semibold mb-1">Tailwind</h4>
-          <p class="text-xs text-gray-400">Styling</p>
-        </div>
-        <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.25s;">
-          <div class="w-14 h-14 mx-auto mb-4 bg-orange-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-            <svg class="w-8 h-8 text-orange-500" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
-          </div>
-          <h4 class="font-semibold mb-1">HTML/CSS</h4>
-          <p class="text-xs text-gray-400">Markup</p>
-        </div>
-        <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.3s;">
-          <div class="w-14 h-14 mx-auto mb-4 bg-yellow-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-            <svg class="w-8 h-8 text-yellow-500" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
-          </div>
-          <h4 class="font-semibold mb-1">JavaScript</h4>
-          <p class="text-xs text-gray-400">Language</p>
-        </div>
-        <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.35s;">
-          <div class="w-14 h-14 mx-auto mb-4 bg-purple-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-            <svg class="w-8 h-8 text-purple-600" viewBox="0 0 24 24" fill="currentColor"><path d="M5.5 22v-7.5H2V9h10.5v5.5H9V22h3.5v-7.5H16V9h3.5v5.5H16V22h6v-9.5L12 2 2 12.5V22h3.5z"/></svg>
-          </div>
-          <h4 class="font-semibold mb-1">Figma</h4>
-          <p class="text-xs text-gray-400">Design</p>
-        </div>
+        <h4 class="font-semibold mb-1">Next.js</h4>
+        <p class="text-xs text-gray-400">Framework</p>
       </div>
-      <!-- Skill Bars -->
-      <div class="mt-16 grid md:grid-cols-2 gap-8">
-        <div class="reveal glass-card rounded-2xl p-8">
-          <h3 class="font-display text-xl font-bold mb-6">Frontend Development</h3>
-          <div class="space-y-5">
-            <div><div class="flex justify-between mb-2"><span class="text-sm font-medium">React / Next.js</span><span class="text-sm text-gray-400">90%</span></div><div class="h-2 bg-gray-100 rounded-full overflow-hidden"><div class="skill-bar h-full rounded-full" style="width: 90%;"></div></div></div>
-            <div><div class="flex justify-between mb-2"><span class="text-sm font-medium">Tailwind CSS</span><span class="text-sm text-gray-400">95%</span></div><div class="h-2 bg-gray-100 rounded-full overflow-hidden"><div class="skill-bar h-full rounded-full" style="width: 95%;"></div></div></div>
-            <div><div class="flex justify-between mb-2"><span class="text-sm font-medium">JavaScript</span><span class="text-sm text-gray-400">85%</span></div><div class="h-2 bg-gray-100 rounded-full overflow-hidden"><div class="skill-bar h-full rounded-full" style="width: 85%;"></div></div></div>
-          </div>
+
+      <!-- Node.js -->
+      <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.1s;">
+        <div class="w-14 h-14 mx-auto mb-4 bg-green-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 text-green-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.985c-.275 0-.532-.074-.772-.202l-2.439-1.448c-.365-.203-.182-.277-.072-.314.496-.165.588-.201 1.101-.493.056-.037.129-.02.185.017l1.87 1.12c.074.036.166.036.221 0l7.319-4.237c.074-.036.11-.11.11-.202V7.768c0-.091-.036-.165-.11-.201l-7.319-4.219c-.073-.037-.165-.037-.221 0L4.552 7.566c-.073.036-.11.129-.11.201v8.457c0 .073.037.166.11.202l2 1.157c1.082.548 1.762-.095 1.762-.735V8.502c0-.11.091-.221.22-.221h.936c.108 0 .22.092.22.221v8.347c0 1.449-.788 2.294-2.164 2.294-.422 0-.752 0-1.688-.46l-1.925-1.099a1.55 1.55 0 0 1-.771-1.34V7.786c0-.55.293-1.064.771-1.339l7.316-4.237a1.637 1.637 0 0 1 1.544 0l7.317 4.237c.479.274.771.789.771 1.339v8.458c0 .549-.293 1.063-.771 1.34l-7.317 4.236c-.241.11-.516.165-.773.165z"/></svg>
         </div>
-        <div class="reveal glass-card rounded-2xl p-8" style="transition-delay: 0.1s;">
-          <h3 class="font-display text-xl font-bold mb-6">Backend & Tools</h3>
-          <div class="space-y-5">
-            <div><div class="flex justify-between mb-2"><span class="text-sm font-medium">Node.js / Express</span><span class="text-sm text-gray-400">85%</span></div><div class="h-2 bg-gray-100 rounded-full overflow-hidden"><div class="skill-bar h-full rounded-full" style="width: 85%;"></div></div></div>
-            <div><div class="flex justify-between mb-2"><span class="text-sm font-medium">MongoDB / MySQL</span><span class="text-sm text-gray-400">80%</span></div><div class="h-2 bg-gray-100 rounded-full overflow-hidden"><div class="skill-bar h-full rounded-full" style="width: 80%;"></div></div></div>
-            <div><div class="flex justify-between mb-2"><span class="text-sm font-medium">Git / DevOps</span><span class="text-sm text-gray-400">75%</span></div><div class="h-2 bg-gray-100 rounded-full overflow-hidden"><div class="skill-bar h-full rounded-full" style="width: 75%;"></div></div></div>
-          </div>
+        <h4 class="font-semibold mb-1">Node.js</h4>
+        <p class="text-xs text-gray-400">Backend</p>
+      </div>
+
+      <!-- PHP - NEW -->
+      <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.15s;">
+        <div class="w-14 h-14 mx-auto mb-4 bg-indigo-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+          <svg class="w-9 h-9 text-indigo-600" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M11.39 12.41c-.69.44-1.36.81-2.14 1.07-.26.09-.52.16-.79.22-.37.07-.74.1-1.1.1H0l2.51-11.78h3.47c.6 0 1.19.05 1.75.14.56.09 1.08.25 1.54.49.46.24.85.56 1.17.95.32.39.56.85.72 1.37.16.52.24 1.07.24 1.64 0 .58-.08 1.15-.24 1.69-.16.54-.39.99-.7 1.37-.31.38-.69.69-1.14.91-.45.22-.95.36-1.49.42.54.06 1.07.2 1.57.42.5.22.95.52 1.34.9.39.38.7.84.92 1.37.22.53.33 1.1.33 1.7 0 .67-.13 1.31-.38 1.91-.25.6-.61 1.13-1.07 1.57-.46.44-1.03.79-1.69 1.05-.66.26-1.37.39-2.13.39h-3.58L0 21.99h7.61c.92 0 1.81-.14 2.65-.41.84-.27 1.58-.67 2.2-1.19.62-.52 1.11-1.17 1.46-1.93.35-.76.53-1.59.53-2.48 0-1.01-.21-1.92-.64-2.73-.43-.81-1.03-1.49-1.79-2.04zM5.89 9.41c-.34 0-.67-.03-.99-.09-.32-.06-.62-.16-.9-.31-.28-.15-.51-.35-.69-.61-.18-.26-.27-.57-.27-.93 0-.35.09-.67.27-.94.18-.27.41-.48.69-.63.28-.15.59-.23.93-.25.34-.02.7.01 1.07.09v1.92c-.37.08-.71.15-1.03.19-.32.04-.62.06-.89.06zm.71 6.06c.38 0 .75-.04 1.1-.11.35-.07.68-.19.98-.36.3-.17.55-.39.75-.66.2-.27.3-.59.3-.95 0-.37-.1-.7-.3-.98-.2-.28-.45-.5-.75-.66-.3-.16-.63-.25-.98 absolut-.29-.35-.04-.72 0-1.1.11v3.9z"/>
+            <path d="M23.39 12.41c-.69.44-1.36.81-2.14 1.07-.26.09-.52.16-.79.22-.37.07-.74.1-1.1.1H12l2.51-11.78h3.47c.6 0 1.19.05 1.75.14.56.09 1.08.25 1.54.49.46.24.85.56 1.17.95.32.39.56.85.72 1.37.16.52.24 1.07.24 1.64 0 .58-.08 1.15-.24 1.69-.16.54-.39.99-.7 1.37-.31.38-.69.69-1.14.91-.45.22-.95.36-1.49.42.54.06 1.07.2 1.57.42.5.22.95.52 1.34.9.39.38.7.84.92 1.37.22.53.33 1.1.33 1.7 0 .67-.13 1.31-.38 1.91-.25.6-.61 1.13-1.07 1.57-.46.44-1.03.79-1.69 1.05-.66.26-1.37.39-2.13.39h-3.58L12 21.99h7.61c.92 0 1.81-.14 2.65-.41.84-.27 1.58-.67 2.2-1.19.62-.52 1.11-1.17 1.46-1.93.35-.76.53-1.59.53-2.48 0-1.01-.21-1.92-.64-2.73-.43-.81-1.03-1.49-1.79-2.04zM17.89 9.41c-.34 0-.67-.03-.99-.09-.32-.06-.62-.16-.9-.31-.28-.15-.51-.35-.69-.61-.18-.26-.27-.57-.27-.93 0-.35.09-.67.27-.94.18-.27.41-.48.69-.63.28-.15.59-.23.93-.25.34-.02.7.01 1.07.09v1.92c-.37.08-.71.15-1.03.19-.32.04-.62.06-.89.06zm.71 6.06c.38 0 .75-.04 1.1-.11.35-.07.68-.19.98-.36.3-.17.55-.39.75-.66.2-.27.3-.59.3-.95 0-.37-.1-.7-.3-.98-.2-.28-.45-.5-.75-.66-.3-.16-.63-.25-.98-.29-.35-.04-.72 0-1.1.11v3.9z"/>
+          </svg>
         </div>
+        <h4 class="font-semibold mb-1">PHP</h4>
+        <p class="text-xs text-gray-400">Backend Language</p>
+      </div>
+
+      <!-- MySQL - NEW -->
+      <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.2s;">
+        <div class="w-14 h-14 mx-auto mb-4 bg-blue-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+          <svg class="w-9 h-9 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.49 6.09c-1.51-1.23-3.6-2-5.99-2-4.56 0-8.38 2.9-9.82 6.92 1.44-1.13 3.26-1.81 5.27-1.81 1.55 0 2.96.47 4.08 1.24 1.12.77 1.95 1.85 2.38 3.11.43-1.26 1.26-2.34 2.38-3.11 1.12-.77 2.53-1.24 4.08-1.24 2.01 0 3.83.68 5.27 1.81C20.62 8.99 19.49 6.09 19.49 6.09zM12 10.03c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm7.5 1.99c-1.36 0-2.5 1.12-2.5 2.5 0 1.38 1.14 2.5 2.5 2.5s2.5-1.12 2.5-2.5c0-1.38-1.14-2.5-2.5-2.5zm-15 0c-1.36 0-2.5 1.12-2.5 2.5 0 1.38 1.14 2.5 2.5 2.5s2.5-1.12 2.5-2.5c0-1.38-1.14-2.5-2.5-2.5z"/>
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-1.86.64-3.57 1.72-4.92 1.51 1.23 3.6 2 5.99 2 1.55 0 2.96-.47 4.08-1.24 1.12-.77 1.95-1.85 2.38-3.11.43 1.26 1.26 2.34 2.38 3.11 1.12.77 2.53 1.24 4.08 1.24 2.39 0 4.48-.77 5.99-2C19.36 8.43 16.41 10 12 10c-4.41 0-8 3.59-8 8s3.59 8 8 8z"/>
+          </svg>
+        </div>
+        <h4 class="font-semibold mb-1">MySQL</h4>
+        <p class="text-xs text-gray-400">Database</p>
+      </div>
+
+      <!-- MongoDB -->
+      <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.25s;">
+        <div class="w-14 h-14 mx-auto mb-4 bg-green-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 text-green-700" viewBox="0 0 24 24" fill="currentColor"><path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z"/></svg>
+        </div>
+        <h4 class="font-semibold mb-1">MongoDB</h4>
+        <p class="text-xs text-gray-400">NoSQL Database</p>
+      </div>
+
+      <!-- Tailwind CSS -->
+      <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.3s;">
+        <div class="w-14 h-14 mx-auto mb-4 bg-cyan-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/></svg>
+        </div>
+        <h4 class="font-semibold mb-1">Tailwind CSS</h4>
+        <p class="text-xs text-gray-400">Styling</p>
+      </div>
+
+      <!-- Remaining skills... (HTML/CSS, JavaScript, Figma) -->
+      <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.35s;">
+        <div class="w-14 h-14 mx-auto mb-4 bg-orange-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 text-orange-500" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+        </div>
+        <h4 class="font-semibold mb-1">HTML/CSS</h4>
+        <p class="text-xs text-gray-400">Markup</p>
+      </div>
+
+      <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.4s;">
+        <div class="w-14 h-14 mx-auto mb-4 bg-yellow-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 text-yellow-500" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+        </div>
+        <h4 class="font-semibold mb-1">JavaScript</h4>
+        <p class="text-xs text-gray-400">Language</p>
+      </div>
+
+      <div class="reveal glass-card rounded-2xl p-6 premium-hover text-center group" style="transition-delay: 0.45s;">
+        <div class="w-14 h-14 mx-auto mb-4 bg-purple-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 text-purple-600" viewBox="0 0 24 24" fill="currentColor"><path d="M5.5 22v-7.5H2V9h10.5v5.5H9V22h3.5v-7.5H16V9h3.5v5.5H16V22h6v-9.5L12 2 2 12.5V22h3.5z"/></svg>
+        </div>
+        <h4 class="font-semibold mb-1">Figma</h4>
+        <p class="text-xs text-gray-400">Design</p>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
   <!-- Portfolio -->
-  <section id="portfolio" class="py-24 bg-gray-900 text-white">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16 reveal">
-        <p class="text-sm font-medium text-gray-400 uppercase tracking-widest mb-4">Featured Work</p>
-        <h2 class="font-display text-4xl md:text-5xl font-bold">Portfolio</h2>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8">
-        <a href="https://meritroot.com/" target="_blank" class="reveal group relative rounded-3xl overflow-hidden aspect-video premium-hover">
-          <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-700"></div>
-          <div class="absolute inset-0 project-overlay"></div>
-          <div class="absolute inset-0 p-8 flex flex-col justify-end">
-            <span class="text-xs font-medium text-blue-300 uppercase tracking-wider mb-2">EdTech Platform</span>
-            <h3 class="font-display text-2xl font-bold mb-2 group-hover:translate-x-2 transition-transform">Meritroot Web Portal</h3>
-            <p class="text-gray-300 text-sm">Full-stack JEE/NEET platform with Next.js, Node.js, MongoDB</p>
-            <div class="flex gap-2 mt-4">
-              <span class="px-3 py-1 bg-white/10 rounded-full text-xs">Next.js</span>
-              <span class="px-3 py-1 bg-white/10 rounded-full text-xs">MongoDB</span>
-              <span class="px-3 py-1 bg-white/10 rounded-full text-xs">Node.js</span>
-            </div>
+ <section id="portfolio" class="py-24 bg-gray-900 text-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <p class="text-sm font-medium text-gray-400 uppercase tracking-widest mb-4">Featured Work</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold">Portfolio</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Project 1 - Meritroot -->
+      <a href="https://meritroot.com/" target="_blank" class="reveal group relative rounded-3xl overflow-hidden aspect-video premium-hover">
+        <img src="assets/meritroot.png" alt="Meritroot Web Portal" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/50"></div> <!-- Dark overlay for readability -->
+        <div class="relative z-10 p-8 flex flex-col justify-end h-full">
+          <span class="text-xs font-medium text-blue-300 uppercase tracking-wider mb-2">EdTech Platform</span>
+          <h3 class="font-display text-2xl font-bold mb-2 group-hover:translate-x-2 transition-transform">Meritroot Web Portal</h3>
+          <p class="text-gray-300 text-sm">Full-stack JEE/NEET platform with Next.js, Node.js, MongoDB</p>
+          <div class="flex gap-2 mt-4">
+            <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs">Next.js</span>
+            <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs">MongoDB</span>
+            <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs">Node.js</span>
           </div>
-          <div class="absolute top-6 right-6 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-gray-900 transition">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </div>
+         <div class="absolute top-6 right-6 z-20 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-gray-900 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </div>
+      </a>
+
+      <!-- Project 2 - AimLearno -->
+      <a href="https://testaimlearno.gt.tc/" target="_blank" class="reveal group relative rounded-3xl overflow-hidden aspect-video premium-hover" style="transition-delay: 0.1s;">
+        <img src="assets/aimlearno.png" alt="AimLearno Exam Portal" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative z-10 p-8 flex flex-col justify-end h-full">
+          <span class="text-xs font-medium text-green-300 uppercase tracking-wider mb-2">Learning Management</span>
+          <h3 class="font-display text-2xl font-bold mb-2 group-hover:translate-x-2 transition-transform">AimLearno Exam Portal</h3>
+          <p class="text-gray-300 text-sm">Responsive LMS with practice tests, mock exams, admin panel</p>
+          <div class="flex gap-2 mt-4">
+            <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs">PHP</span>
+            <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs">MySQL</span>
+            <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs">Tailwind</span>
           </div>
-        </a>
-        <a href="https://testaimlearno.gt.tc/" target="_blank" class="reveal group relative rounded-3xl overflow-hidden aspect-video premium-hover" style="transition-delay: 0.1s;">
-          <div class="absolute inset-0 bg-gradient-to-br from-green-600 to-teal-700"></div>
-          <div class="absolute inset-0 project-overlay"></div>
-          <div class="absolute inset-0 p-8 flex flex-col justify-end">
-            <span class="text-xs font-medium text-green-300 uppercase tracking-wider mb-2">Learning Management</span>
-            <h3 class="font-display text-2xl font-bold mb-2 group-hover:translate-x-2 transition-transform">AimLearno Exam Portal</h3>
-            <p class="text-gray-300 text-sm">Responsive LMS with practice tests, mock exams, admin panel</p>
-            <div class="flex gap-2 mt-4">
-              <span class="px-3 py-1 bg-white/10 rounded-full text-xs">PHP</span>
-              <span class="px-3 py-1 bg-white/10 rounded-full text-xs">MySQL</span>
-              <span class="px-3 py-1 bg-white/10 rounded-full text-xs">Tailwind</span>
-            </div>
+        </div>
+        <div class="absolute top-6 right-6 z-20 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-gray-900 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </div>
+      </a>
+
+      <!-- Project 3 - Traffiqon -->
+      <a href="https://traffiqon.com" target="_blank" class="reveal group relative rounded-3xl overflow-hidden aspect-video premium-hover" style="transition-delay: 0.2s;">
+        <img src="assets/traffiqon.png" alt="Traffiqon.com" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative z-10 p-8 flex flex-col justify-end h-full">
+          <span class="text-xs font-medium text-orange-300 uppercase tracking-wider mb-2">Marketing Website</span>
+          <h3 class="font-display text-2xl font-bold mb-2 group-hover:translate-x-2 transition-transform">Traffiqon.com</h3>
+          <p class="text-gray-300 text-sm">Digital marketing services website with modern UI/UX</p>
+          <div class="flex gap-2 mt-4">
+            <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs">HTML</span>
+            <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs">Tailwind</span>
+            <span class="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs">JavaScript</span>
           </div>
-          <div class="absolute top-6 right-6 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-gray-900 transition">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </div>
+        <div class="absolute top-6 right-6 z-20 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-gray-900 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </div>
+      </a>
+
+      <!-- Project 4- Meritroot Figma Prototype -->
+      <a href="https://www.figma.com/design/hIVgcvCSJYa7kfKlL9tsnZ/Meritroot_website_V01-webflow?node-id=0-1&t=C1VgrboWjAEHaLUf-1" target="_blank" class="reveal group relative rounded-3xl overflow-hidden aspect-video premium-hover" style="transition-delay: 0.1s;">
+        <img src="assets/meritroot-figma.png" alt="Meritroot Figma Prototype" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
+        <div class="relative z-10 p-8 flex flex-col justify-end h-full">
+          <span class="text-xs font-medium text-purple-300 uppercase tracking-wider mb-2">UI/UX Design • Figma</span>
+          <h3 class="font-display text-2xl font-bold mb-2 group-hover:translate-x-2 transition-transform">Meritroot Website Prototype</h3>
+          <p class="text-gray-300 text-sm">Complete interactive prototype & design system (Webflow-ready)</p>
+          <div class="flex gap-2 mt-4">
+            <span class="px-3 py-1 bg-purple-500/20 border border-purple-400/30 rounded-full text-xs">Figma</span>
+            <span class="px-3 py-1 bg-purple-500/20 border border-purple-400/30 rounded-full text-xs">Prototyping</span>
+            <span class="px-3 py-1 bg-purple-500/20 border border-purple-400/30 rounded-full text-xs">Webflow</span>
           </div>
-        </a>
-        <a href="https://traffiqon.com" target="_blank" class="reveal group relative rounded-3xl overflow-hidden aspect-video premium-hover" style="transition-delay: 0.2s;">
-          <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600"></div>
-          <div class="absolute inset-0 project-overlay"></div>
-          <div class="absolute inset-0 p-8 flex flex-col justify-end">
-            <span class="text-xs font-medium text-orange-300 uppercase tracking-wider mb-2">Marketing Website</span>
-            <h3 class="font-display text-2xl font-bold mb-2 group-hover:translate-x-2 transition-transform">Traffiqon.com</h3>
-            <p class="text-gray-300 text-sm">Digital marketing services website with modern UI/UX</p>
-            <div class="flex gap-2 mt-4">
-              <span class="px-3 py-1 bg-white/10 rounded-full text-xs">HTML</span>
-              <span class="px-3 py-1 bg-white/10 rounded-full text-xs">Tailwind</span>
-              <span class="px-3 py-1 bg-white/10 rounded-full text-xs">JavaScript</span>
-            </div>
+        </div>
+        <div class="absolute top-6 right-6 z-20 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-gray-900 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </div>
+      </a>
+
+      <!-- Project 5 - Instagram Posts Design -->
+      <a href="https://www.figma.com/design/CnR8fXu5mvyECzzptkqNQh/Untitled?node-id=0-1&t=2NubIWnLjN29dYKB-1" target="_blank" class="reveal group relative rounded-3xl overflow-hidden aspect-video premium-hover" style="transition-delay: 0.2s;">
+        <img src="assets/instagram-posts.png" alt="Instagram Carousel & Stories Design" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative z-10 p-8 flex flex-col justify-end h-full">
+          <span class="text-xs font-medium text-pink-300 uppercase tracking-wider mb-2">Social Media Design • Figma</span>
+          <h3 class="font-display text-2xl font-bold mb-2 group-hover:translate-x-2 transition-transform">Instagram Posts & Stories</h3>
+          <p class="text-gray-300 text-sm">Modern carousel posts, stories, reels templates for brands</p>
+          <div class="flex gap-2 mt-4">
+            <span class="px-3 py-1 bg-pink-500/20 border border-pink-400/30 rounded-full text-xs">Figma</span>
+            <span class="px-3 py-1 bg-pink-500/20 border border-pink-400/30 rounded-full text-xs">Social Media</span>
+            <span class="px-3 py-1 bg-pink-500/20 border border-pink-400/30 rounded-full text-xs">Canva</span>
           </div>
-          <div class="absolute top-6 right-6 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-gray-900 transition">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </div>
+        <div class="absolute top-6 right-6 z-20 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-gray-900 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </div>
+      </a>
+
+      <!-- Placeholder for upcoming projects -->
+      <div class="reveal group relative rounded-3xl overflow-hidden aspect-video premium-hover bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center" style="transition-delay: 0.3s;">
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 border-2 border-dashed border-gray-500 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
           </div>
-        </a>
-        <div class="reveal group relative rounded-3xl overflow-hidden aspect-video premium-hover bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center" style="transition-delay: 0.3s;">
-          <div class="text-center">
-            <div class="w-16 h-16 mx-auto mb-4 border-2 border-dashed border-gray-500 rounded-full flex items-center justify-center">
-              <svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
-            </div>
-            <p class="text-gray-400 font-medium">More Projects Coming</p>
-            <p class="text-gray-500 text-sm">Stay tuned for updates</p>
-          </div>
+          <p class="text-gray-400 font-medium">More Projects Coming</p>
+          <p class="text-gray-500 text-sm">Stay tuned for updates</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- CTA -->
   <section class="py-24 relative overflow-hidden">
@@ -556,10 +659,15 @@
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           Get In Touch
         </a>
-        <a href="#" class="px-10 py-5 rounded-full font-medium text-lg border-2 border-gray-200 hover:border-gray-900 transition inline-flex items-center gap-3">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          Download CV
-        </a>
+       <a href="pdf/TARUNRESUME.pdf" 
+         download="Tarun_Resume.pdf"
+         class="px-10 py-5 rounded-full font-medium text-lg border-2 border-gray-300 hover:border-gray-900 hover:bg-gray-50 transition inline-flex items-center gap-3 shadow-lg">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+        Download CV
+      </a>
       </div>
     </div>
   </section>
@@ -602,31 +710,7 @@
             </div>
           </div>
         </div>
-        <div class="reveal glass-card rounded-3xl p-8" style="transition-delay: 0.1s;">
-          <div class="space-y-6">
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <label class="text-sm font-medium text-gray-600 mb-2 block">Name</label>
-                <input type="text" placeholder="Your name" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-900 focus:outline-none transition">
-              </div>
-              <div>
-                <label class="text-sm font-medium text-gray-600 mb-2 block">Email</label>
-                <input type="email" placeholder="your@email.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-900 focus:outline-none transition">
-              </div>
-            </div>
-            <div>
-              <label class="text-sm font-medium text-gray-600 mb-2 block">Subject</label>
-              <input type="text" placeholder="Project inquiry" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-900 focus:outline-none transition">
-            </div>
-            <div>
-              <label class="text-sm font-medium text-gray-600 mb-2 block">Message</label>
-              <textarea rows="4" placeholder="Tell me about your project..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-900 focus:outline-none transition resize-none"></textarea>
-            </div>
-            <button class="magnetic-btn w-full bg-gray-900 text-white py-4 rounded-xl font-medium hover:bg-gray-800 transition">
-              Send Message
-            </button>
-          </div>
-        </div>
+      
       </div>
     </div>
   </section>
